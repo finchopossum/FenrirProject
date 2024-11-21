@@ -19,6 +19,7 @@ int buttonStateA = 0;
 int buttonStateB = 0;
 int buttonStateC = 0;
 int buttonStateD = 0;
+int buttonStateE = 0;
 
 
 void setup() {
@@ -26,20 +27,46 @@ void setup() {
   myServoB.attach(11);
   myServoC.attach(12);
   pinMode(ledPinA, OUTPUT);
-  pinMode(ledPinA, OUTPUT);
-  pinMode(ledPinA, OUTPUT);
+  pinMode(ledPinB, OUTPUT);
+  pinMode(ledPinC, OUTPUT);
   pinMode(buttonPinA, INPUT);
-  pinMode(buttonPinA, INPUT);
-  pinMode(buttonPinA, INPUT);
-  pinMode(buttonPinA, INPUT);
+  pinMode(buttonPinB, INPUT);
+  pinMode(buttonPinC, INPUT);
+  pinMode(buttonPinD, INPUT);
+  pinMode(buttonPinE, INPUT);
 }
 
 void loop() {
+  buttonStateA = digitalRead(buttonPinA);
+  buttonStateB = digitalRead(buttonPinB);
+  buttonStateC = digitalRead(buttonPinC);
+  buttonStateD = digitalRead(buttonPinD);
+  buttonStateE = digitalRead(buttonPinE);
   // first scene: button that activates 2 leds
+ 
+
+
+  if (buttonStateA == HIGH) {
+    digitalWrite(ledPinA, HIGH);
+    digitalWrite(ledPinB, HIGH);
+  } else {
+    digitalWrite(ledPinA, LOW);
+    digitalWrite(ledPinB, LOW);
+  }
   
   // second scene: button that activates a servo
+  if (buttonStateB == HIGH) {
+    myServoB.write(180);
+  } else {
+    myServoB.write(0);
+  }
   
   // third scene: button that activates a servo
+  if (buttonStateC == HIGH) {
+    myServoB.write(180);
+  } else {
+    myServoB.write(0);
+  }
   
   // thirds scene: 2 buttons that activates a servo and a led
 }
