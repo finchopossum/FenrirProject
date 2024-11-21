@@ -1,23 +1,45 @@
-const int buttonPin = 2;
-const int ledPin = 13;
-Servo motorone;
-Servo motortwo;
-Servo motorthree;
+#include <Servo.h>
 
-int buttonState = 0;
+
+Servo myServoA;
+Servo myServoB;
+Servo myServoC;
+
+const int ledPinA = 2;  
+const int ledPinB = 3;
+const int ledPinC = 4;
+
+const int buttonPinA = 5;  
+const int buttonPinB = 6;  
+const int buttonPinC = 7;  
+const int buttonPinD = 8;  
+const int buttonPinE = 9;  
+
+int buttonStateA = 0;
+int buttonStateB = 0;
+int buttonStateC = 0;
+int buttonStateD = 0;
+
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
-  my.servo.attach(9);
+  myServoA.attach(10);
+  myServoB.attach(11);
+  myServoC.attach(12);
+  pinMode(ledPinA, OUTPUT);
+  pinMode(ledPinA, OUTPUT);
+  pinMode(ledPinA, OUTPUT);
+  pinMode(buttonPinA, INPUT);
+  pinMode(buttonPinA, INPUT);
+  pinMode(buttonPinA, INPUT);
+  pinMode(buttonPinA, INPUT);
 }
-##first scene, putting first prop in place will activate led
-void loop() {
-  buttonState = digitalRead(buttonPin);
 
-  if (buttonState == HIGH) {
-    digitalWrite(ledPin, HIGH);
-  } else {
-    digitalWrite(ledPin, LOW);
-  }
+void loop() {
+// first scene: button that activates 2 leds
+
+// second scene: button that activates a servo
+
+// third scene: button that activates a servo
+
+// thirds scene: 2 buttons that activates a servo and a led
 }
