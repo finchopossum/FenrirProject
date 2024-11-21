@@ -35,11 +35,11 @@ void setup() {
 }
 
 void loop() {
-// first scene: button that activates 2 leds
-
-// second scene: button that activates a servo
-
-// third scene: button that activates a servo
-
-// thirds scene: 2 buttons that activates a servo and a led
+  // first scene: button that activates 2 leds
+  
+  // second scene: button that activates a servo
+  
+  // third scene: button that activates a servo
+  
+  // thirds scene: 2 buttons that activates a servo and a led
 }
