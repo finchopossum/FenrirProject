@@ -21,6 +21,12 @@ int buttonStateC = 0;
 int buttonStateD = 0;
 int buttonStateE = 0;
 
+int lastButtonStateD = 0;
+int lastButtonStateE = 0;
+
+bool A = false;
+bool B = false;
+bool C = false;
 
 void setup() {
   myServoA.attach(10);
@@ -67,6 +73,24 @@ void loop() {
   } else {
     myServoB.write(0);
   }
-  
+
   // thirds scene: 2 buttons that activates a servo and a led
+  if (buttonStateD != lastButtonStateD) {
+    if (buttonStateD == HIGH) {
+    B = true;
+    }
+  }
+  if (buttonStateE != lastButtonStateE) {
+    if (buttonStateE == HIGH) {
+    C = true;
+    }
+  }
+if (A && B) {
+  myServoC.write(180);
+  digitalWrite(ledPinA, HIGH);
+} else {
+   myServoB.write(0);
+  digitalWrite(ledPinA, LOW);
+}
+
 }
