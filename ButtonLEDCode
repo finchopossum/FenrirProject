@@ -49,9 +49,6 @@ void loop() {
   buttonStateD = digitalRead(buttonPinD);
   buttonStateE = digitalRead(buttonPinE);
   // first scene: button that activates 2 leds
- 
-
-
   if (buttonStateA == HIGH) {
     digitalWrite(ledPinA, HIGH);
     digitalWrite(ledPinB, HIGH);
@@ -62,9 +59,9 @@ void loop() {
   
   // second scene: button that activates a servo
   if (buttonStateB == HIGH) {
-    myServoB.write(180);
+    myServoA.write(180);
   } else {
-    myServoB.write(0);
+    myServoA.write(0);
   }
   
   // third scene: button that activates a servo
@@ -89,7 +86,7 @@ if (A && B) {
   myServoC.write(180);
   digitalWrite(ledPinA, HIGH);
 } else {
-   myServoB.write(0);
+   myServoC.write(0);
   digitalWrite(ledPinA, LOW);
 }
 
