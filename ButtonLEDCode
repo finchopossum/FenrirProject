@@ -10,9 +10,9 @@ const int ledPinB = 3;
 const int ledPinC = 4;
 
 const int buttonPinA = 5;  
-const int buttonPinB = 6;  
+const int buttonPinB = 8;  
 const int buttonPinC = 7;  
-const int buttonPinD = 8;  
+const int buttonPinD = 6;  
 const int buttonPinE = 9;  
 
 int buttonStateA = 0;
