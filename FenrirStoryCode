@@ -84,10 +84,10 @@ void loop() {
   }
 if (A && B) {
   myServoC.write(180);
-  digitalWrite(ledPinA, HIGH);
+  digitalWrite(ledPinC, HIGH);
 } else {
    myServoC.write(0);
-  digitalWrite(ledPinA, LOW);
+  digitalWrite(ledPinC, LOW);
 }
 
 }
